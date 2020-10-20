@@ -46,6 +46,23 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class ShopPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Shop Page'),
+        ),
+        body: Center(
+          child: Text('ShopPage'),
+        ),
+        bottomNavigationBar: MyBottomNavigationBar(),
+      ),
+    );
+  }
+}
+
 class LabeledCheckbox extends StatelessWidget {
   const LabeledCheckbox({
     this.label,
@@ -119,7 +136,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     MyApp(),
-    SearchPage(),
+    ShopPage(),
   ];
 
   void onTappedBar(int index) {
